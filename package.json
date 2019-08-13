@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "webapp和小程序快速构建工具",
   "bin": {
-    "quick-work": "index.js"
+    "quick-work": "./src/index.js"
   },
   "repository": {
     "type": "git",
