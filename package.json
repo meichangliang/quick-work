@@ -1,0 +1,26 @@
+{
+  "name": "quick-work",
+  "version": "0.0.1",
+  "description": "webapp和小程序快速构建工具",
+  "bin": {
+    "quick-work": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meichangliang/quick-work.git"
+  },
+  "keywords": [
+    "quick",
+    "work",
+    "快速构建",
+    "脚手架",
+    "React",
+    "TS"
+  ],
+  "author": "Mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meichangliang/quick-work/issues"
+  },
+  "homepage": "https://github.com/meichangliang/quick-work#readme"
+}
