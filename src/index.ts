@@ -1,10 +1,8 @@
-#!/usr/bin/env node
+// #!/usr/bin / env node
 const commander = require("commander");
 const inquirer = require("inquirer");
 
-console.log(1231);
-
-const initAction = () => {
+const initAction = (): void => {
   inquirer
     .prompt([
       {
@@ -17,6 +15,7 @@ const initAction = () => {
       console.info("项目名为：", answers.name);
       console.info("正在拷贝项目，请稍等");
     });
+
 };
 commander.version(require("../package.json").version);
 commander
