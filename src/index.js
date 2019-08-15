@@ -16,7 +16,7 @@ const initAction = () => {
       console.log("正在拷贝项目，请稍等");
     });
 };
-program.version(require("./package.json").version);
+program.version(require("../package.json").version);
 program
   .command("init")
   .description("创建项目")
