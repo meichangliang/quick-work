@@ -28,8 +28,9 @@
     "inquirer": "^6.5.1"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
     "typescript": "^3.5.3",
+    "@types/node": "^12.7.2",
+    "eslint": "^6.1.0",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0"
   }
