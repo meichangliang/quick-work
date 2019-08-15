@@ -23,3 +23,14 @@ commander
   .description("创建项目")
   .action(initAction);
 commander.parse(process.argv);
+
+const foo = {
+  a (): void {
+
+  },
+  b (): void {
+
+  }
+};
+
+const a = { '0+1,234': 0 };
