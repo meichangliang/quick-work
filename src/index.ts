@@ -3,17 +3,20 @@ const commander = require("commander");
 const inquirer = require("inquirer");
 
 const initAction = (): void => {
+
   inquirer
     .prompt([
       {
-        type: "input",
-        message: "请输入项目名称:",
-        name: "name"
-      }
+        "type": "input",
+        "message": "请输入项目名称:",
+        "name": "name",
+      },
     ])
-    .then(answers => {
+    .then((answers) => {
+
       console.info("项目名为：", answers.name);
       console.info("正在拷贝项目，请稍等");
+
     });
 
 };
@@ -24,13 +27,19 @@ commander
   .action(initAction);
 commander.parse(process.argv);
 
-const foo = {
-  a (): void {
 
-  },
-  b (): void {
-
-  }
+const object = {
+  "foo": "bar",
+  "baz": 42,
+  "qux-lorem": true,
 };
 
-const a = { '0+1,234': 0 };
+
+const str = `123${object}hahah `;
+
+
+function name(params: string): void {
+
+  console.log(params);
+
+}
