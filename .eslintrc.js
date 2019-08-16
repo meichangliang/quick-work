@@ -35,8 +35,21 @@ module.exports = {
     "arrow-parens": ["error", "always"],
     "arrow-body-style": ["error", "always"],
     //风格指导
+    "array-bracket-newline": ["error", "consistent"],
+    "array-bracket-spacing": ["error", "never"],
+    "array-element-newline": ["error", { multiline: true, minItems: 3 }],
+    "block-spacing": "error",
+    "brace-style": "error",
     "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": ["error", { before: false, after: true }],
+    "comma-style": "error",
+    "computed-property-spacing": "error",
+    "consistent-this": ["error", "_this"],
+    "eol-last": "error",
+    "func-call-spacing": ["error", "never"],
   },
 };
 
 // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+
+// https://cn.eslint.org/docs/rules/
