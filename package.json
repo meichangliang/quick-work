@@ -1,13 +1,16 @@
 {
   "name": "quick-work",
   "version": "0.0.1",
-  "description": "webapp和小程序快速构建工具",
-  "bin": {
-    "quick-work": "./src/index.js"
-  },
+  "description": "项目快速构建工具",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meichangliang/quick-work.git"
+  },
+  "bin": {
+    "quick-work": "./src/index.js"
+  },
+  "scripts": {
+    "tsc": "./node_modules/typescript/bin/tsc"
   },
   "keywords": [
     "quick",
@@ -15,7 +18,8 @@
     "快速构建",
     "脚手架",
     "React",
-    "TS"
+    "TS",
+    "小程序"
   ],
   "author": "Mark",
   "license": "ISC",
@@ -25,13 +29,13 @@
   "homepage": "https://github.com/meichangliang/quick-work#readme",
   "dependencies": {
     "commander": "^3.0.0",
-    "inquirer": "^6.5.1"
+    "inquirer": "^7.0.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.2",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.2",
     "typescript": "^3.5.3"
   }
 }
