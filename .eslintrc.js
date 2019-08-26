@@ -44,9 +44,22 @@ module.exports = {
     "rest-spread-spacing": ["error", "never"],
     "sort-imports": "off",
     "template-curly-spacing": "error",
+    "no-console": [
+      "warn",
+      {
+        allow: [
+          "warn",
+          "error",
+          "info",
+          "group",
+          "groupCollapsed",
+          "groupEnd",
+          "table",
+        ],
+      },
+    ],
     //ES6相关
     "rest-spread-spacing": ["error", "never"],
-    "template-curly-spacing": "error",
     "prefer-const": "error",
     "object-shorthand": ["error", "consistent-as-needed"],
     "no-useless-computed-key": "error",

@@ -34,12 +34,3 @@ const object = {
   "qux-lorem": true,
 };
 
-
-const str = `123${object}hahah `;
-
-
-function name(params: string): void {
-
-  console.log(params);
-
-}
