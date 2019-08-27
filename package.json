@@ -9,11 +9,7 @@
   "bin": {
     "quick-work": "./bin/quick-work"
   },
-  "scripts": {
-    "start": "tsc -w",
-    "build": "tsc",
-    "test": "/bin/"
-  },
+  "scripts": {},
   "keywords": [
     "quick",
     "work",
