@@ -8,7 +8,6 @@ node_modules
 # build output
 .next
 /dist/
-/lib/
 /build/
 /deploy/dist/
 
