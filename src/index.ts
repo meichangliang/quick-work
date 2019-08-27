@@ -1,24 +1,20 @@
-// #!/usr/bin / env node
+#!/usr/bin / env node
 const commander = require("commander");
 const inquirer = require("inquirer");
 
 const initAction = (): void => {
-
   inquirer
     .prompt([
       {
-        "type": "input",
-        "message": "请输入项目名称:",
-        "name": "name",
-      },
+        type: "input",
+        message: "请输入项目名称:",
+        name: "name"
+      }
     ])
-    .then((answers) => {
-
+    .then((answers: any) => {
       console.info("项目名为：", answers.name);
       console.info("正在拷贝项目，请稍等");
-
     });
-
 };
 commander.version(require("../package.json").version);
 commander
@@ -27,10 +23,8 @@ commander
   .action(initAction);
 commander.parse(process.argv);
 
-
 const object = {
-  "foo": "bar",
-  "baz": 42,
-  "qux-lorem": true,
+  foo: "bar",
+  baz: 42,
+  "qux-lorem": true
 };
-

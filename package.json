@@ -10,8 +10,8 @@
     "quick-work": "./src/index.js"
   },
   "scripts": {
-    "tsc": "./node_modules/.bin/tsc",
-    "dev": "npm run tsc -w"
+    "dev": "tsc -w",
+    "build": "tsc"
   },
   "keywords": [
     "quick",

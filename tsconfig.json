@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "commonjs",
-    "checkJs": true,
     "declaration": true,
     "sourceMap": true,
     "removeComments": true,
@@ -10,7 +9,7 @@
     "noImplicitAny": true,
     "alwaysStrict": true,
     "moduleResolution": "node",
-    "outDir": "./dist"
+    "outDir": "./lib"
   },
   "include": ["./src"],
   "exclude": ["node_modules", "**/*.spec.ts", "dist"]

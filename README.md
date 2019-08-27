@@ -1,3 +1,9 @@
 # quick-work
 
-用于快速构建小程序和 webapp 的基础项目
+## 程序运行
+
+npm install -g typescript
+
+npm run dev
+
+npm run build
