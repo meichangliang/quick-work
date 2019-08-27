@@ -12,7 +12,7 @@ program
   )
   .parse(process.argv);
 
-console.log("you ordered a pizza with:");
+console.info("you ordered a pizza with:");
 if(program.peppers){
 
   console.log("  - peppers");

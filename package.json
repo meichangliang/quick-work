@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "tsc -w",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "node ./bin/quick-work"
   },
   "keywords": [
     "quick",
