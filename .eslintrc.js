@@ -6,34 +6,35 @@ module.exports = {
   env: {
     commonjs: true,
     es6: true,
-    node: true,
+    node: true
   },
   // ESLint默认风格指南和TS风格指南混用
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   globals: {
     Atomics: "readonly",
-    SharedArrayBuffer: "readonly",
+    SharedArrayBuffer: "readonly"
   },
   parserOptions: {
     ecmaVersion: 2018,
-    project: "./tsconfig.json",
+    project: "./tsconfig.json"
   },
   rules: {
     //TS相关
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/camelcase": "off",
     //重点指导
     "no-var": "error",
     "arrow-body-style": ["error", "always"],
     "arrow-parens": ["error", "always"],
     "arrow-spacing": "error",
-    "generator-star-spacing": ["error", {before: false, after: true}],
+    "generator-star-spacing": ["error", { before: false, after: true }],
     "no-confusing-arrow": "error",
     "no-duplicate-imports": "error",
     "no-useless-computed-key": "error",
@@ -55,9 +56,9 @@ module.exports = {
           "group",
           "groupCollapsed",
           "groupEnd",
-          "table",
-        ],
-      },
+          "table"
+        ]
+      }
     ],
     //ES6相关
     "rest-spread-spacing": ["error", "never"],
@@ -130,32 +131,32 @@ module.exports = {
     //风格指导
     "array-bracket-newline": ["error", "consistent"],
     "array-bracket-spacing": "error",
-    "array-element-newline": ["error", {multiline: true, minItems: 3}],
+    "array-element-newline": ["error", { multiline: true, minItems: 3 }],
     "block-spacing": "error",
     "brace-style": "error",
     "comma-dangle": ["error", "always-multiline"],
-    "comma-spacing": ["error", {before: false, after: true}],
+    "comma-spacing": ["error", { before: false, after: true }],
     "comma-style": "error",
     "computed-property-spacing": "error",
     "consistent-this": ["error", "_this"],
     "eol-last": "error",
     "func-call-spacing": "error",
     "function-paren-newline": ["error", "multiline"],
-    "id-length": ["error", {min: 2}],
+    "id-length": ["error", { min: 2 }],
     "implicit-arrow-linebreak": ["error", "beside"],
-    indent: ["error", 2, {SwitchCase: 1}],
+    indent: ["error", 2, { SwitchCase: 1 }],
     "jsx-quotes": "error",
     "key-spacing": "error",
     "keyword-spacing": [
       "error",
       {
         overrides: {
-          if: {after: false},
-          for: {after: false},
-          while: {after: false},
-          function: {after: false},
-        },
-      },
+          if: { after: false },
+          for: { after: false },
+          while: { after: false },
+          function: { after: false }
+        }
+      }
     ],
     "linebreak-style": ["error", "unix"],
     "lines-between-class-members": ["error", "never"],
@@ -166,7 +167,7 @@ module.exports = {
     "max-params": ["error", 3],
     "multiline-ternary": ["error", "never"],
     "new-parens": "error",
-    "newline-per-chained-call": ["error", {ignoreChainWithDepth: 3}],
+    "newline-per-chained-call": ["error", { ignoreChainWithDepth: 3 }],
     "no-array-constructor": "error",
     "no-bitwise": "error",
     "no-mixed-operators": "error",
@@ -174,7 +175,7 @@ module.exports = {
     "no-negated-condition": "error",
     "no-nested-ternary": "error",
     "no-new-object": "error",
-    "no-plusplus": ["error", {allowForLoopAfterthoughts: true}],
+    "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
     "no-trailing-spaces": "error",
     "no-whitespace-before-property": "error",
     "no-unneeded-ternary": "error",
@@ -182,9 +183,9 @@ module.exports = {
       "error",
       {
         ObjectPattern: {
-          multiline: true,
-        },
-      },
+          multiline: true
+        }
+      }
     ],
     "object-curly-spacing": ["error", "never"],
     "object-property-newline": "error",
@@ -206,8 +207,8 @@ module.exports = {
       {
         anonymous: "always",
         named: "never",
-        asyncArrow: "always",
-      },
+        asyncArrow: "always"
+      }
     ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
@@ -215,8 +216,8 @@ module.exports = {
     "switch-colon-spacing": "error",
     "template-tag-spacing": "error",
     "unicode-bom": "error",
-    "wrap-regex": "error",
-  },
+    "wrap-regex": "error"
+  }
 };
 
 // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin

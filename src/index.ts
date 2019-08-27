@@ -63,7 +63,10 @@ const promptList: Array<object> = [
 ];
 
 
-inquirer.prompt(promptList).then((answers: object) => {
+inquirer.prompt(promptList).then((answers: {
+  projectType: string;
+  [propName: string]: string;
+}) => {
 
   buildStart(answers);
 
