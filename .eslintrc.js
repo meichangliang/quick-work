@@ -27,6 +27,7 @@ module.exports = {
     //TS相关
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     //重点指导
     "no-var": "error",
     "arrow-body-style": ["error", "always"],
