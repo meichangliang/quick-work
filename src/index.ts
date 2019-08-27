@@ -1,32 +1,19 @@
-#!/usr/bin / env node
-const commander = require("commander");
-const inquirer = require("inquirer");
+var program = require("commander");
 
-console.log("hahah xxx");
+program
+  .version("0.1.0")
+  .option("-p, --peppers", "Add peppers")
+  .option("-P, --pineapple", "Add pineapple")
+  .option("-b, --bbq-sauce", "Add bbq sauce")
+  .option(
+    "-c, --cheese [type]",
+    "Add the specified type of cheese [marble]",
+    "marble"
+  )
+  .parse(process.argv);
 
-const initAction = (): void => {
-  inquirer
-    .prompt([
-      {
-        type: "input",
-        message: "请输入项目名称:",
-        name: "name"
-      }
-    ])
-    .then((answers: any) => {
-      console.info("项目名为：", answers.name);
-      console.info("正在拷贝项目，请稍等");
-    });
-};
-commander.version(require("../package.json").version);
-commander
-  .command("init")
-  .description("创建项目")
-  .action(initAction);
-commander.parse(process.argv);
-
-const object = {
-  foo: "bar",
-  baz: 42,
-  "qux-lorem": true
-};
+console.log("you ordered a pizza with:");
+if (program.peppers) console.log("  - peppers");
+if (program.pineapple) console.log("  - pineapple");
+if (program.bbqSauce) console.log("  - bbq");
+console.log("  - %s cheese", program.cheese);
