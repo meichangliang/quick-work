@@ -7,11 +7,12 @@
     "url": "git+https://github.com/meichangliang/quick-work.git"
   },
   "bin": {
-    "quick-work": "./src/index.js"
+    "quick-work": "./bin/quick-work"
   },
   "scripts": {
-    "dev": "tsc -w",
-    "build": "tsc"
+    "start": "tsc -w",
+    "build": "tsc",
+    "test": "/bin/"
   },
   "keywords": [
     "quick",

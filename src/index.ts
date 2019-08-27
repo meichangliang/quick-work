@@ -2,6 +2,8 @@
 const commander = require("commander");
 const inquirer = require("inquirer");
 
+console.log("hahah xxx");
+
 const initAction = (): void => {
   inquirer
     .prompt([
