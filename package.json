@@ -30,7 +30,8 @@
   "homepage": "https://github.com/meichangliang/quick-work#readme",
   "dependencies": {
     "commander": "^3.0.0",
-    "inquirer": "^7.0.0"
+    "inquirer": "^7.0.0",
+    "single-line-log": "^1.1.2"
   },
   "devDependencies": {
     "@types/node": "^12.7.2",

@@ -54,3 +54,32 @@ export const buildStart = (param: {projectType: string}): void => {
 };
 
 
+// 引入工具模块
+const ProgressBar = require("./single_log");
+
+// 初始化一个进度条长度为 50 的 ProgressBar 实例
+const pb = new ProgressBar("下载进度", 50);
+
+// 这里只是一个 pb 的使用示例，不包含任何功能
+let num = 0;
+const total = 200;
+function downloading(): void{
+
+  if(num <= total){
+
+    // 更新进度条
+    pb.render({completed: num,
+      total});
+
+    num += 1;
+    setTimeout(function (){
+
+      downloading();
+
+    }, 500);
+
+  }
+
+}
+downloading();
+
