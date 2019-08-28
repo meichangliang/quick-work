@@ -22,18 +22,16 @@ class ProgressBar{
     let cell = "";
     for(let i = 0; i < cell_num; i++){
 
-      cell += "█";
+      cell += "-";
 
     }
     let empty = "";
     for(let i = 0; i < this.length - cell_num; i++){
 
-      empty += "░";
+      empty += "#";
 
     }
-
     const cmdText = `${this.description}: ${(100 * Number(percent)).toFixed(2)}% ${cell}${empty} ${opts.completed}/${opts.total}`;
-
     slog(cmdText);
 
   };

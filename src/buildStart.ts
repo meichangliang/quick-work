@@ -5,24 +5,24 @@ const downLoad_webapp = (): void => {
   console.info("正在当前目录构架应用程序。。。");
 
 
-  child.exec(
-    "git clone https://github.com/meichangliang/Public_React_WebApp_TS.git"
-    , function (err: any, sto: any){
+  // child.exec(
+  //   "git clone https://github.com/meichangliang/Public_React_WebApp_TS.git"
+  //   , function (err: any, sto: any){
 
-      console.log("构建完毕");
-      if(err){
+  //     console.log("构建完毕");
+  //     if(err){
 
-        console.error(err);
+  //       console.error(err);
 
-      }
-      if(sto){
+  //     }
+  //     if(sto){
 
-        console.log(sto);
+  //       console.log(sto);
 
-      }
+  //     }
 
-    }
-  );
+  //   }
+  // );
 
 
 };
@@ -76,7 +76,12 @@ function downloading(): void{
 
       downloading();
 
-    }, 500);
+    }, 100);
+
+  } else {
+
+    //执行完毕
+    console.log("执行完毕");
 
   }
 
