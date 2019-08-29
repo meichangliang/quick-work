@@ -1,28 +1,18 @@
-const child = require("child_process");
+const download = require("./download");
 
 const downLoad_webapp = (): void => {
 
-  console.info("正在当前目录构架应用程序。。。");
+  console.info("正在当前目录构建应用程序。。。");
 
+  download({
+    filePath: "https://github.com/meichangliang/Public_React_WebApp_TS/archive/master.zip",
+    fileName: "xxxx.zip",
+    finish(){
 
-  // child.exec(
-  //   "git clone https://github.com/meichangliang/Public_React_WebApp_TS.git"
-  //   , function (err: any, sto: any){
+      console.log("下载完成");
 
-  //     console.log("构建完毕");
-  //     if(err){
-
-  //       console.error(err);
-
-  //     }
-  //     if(sto){
-
-  //       console.log(sto);
-
-  //     }
-
-  //   }
-  // );
+    },
+  });
 
 
 };

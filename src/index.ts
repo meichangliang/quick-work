@@ -71,5 +71,3 @@ inquirer.prompt(promptList).then((answers: {
   buildStart(answers);
 
 });
-
-// 下载模块
