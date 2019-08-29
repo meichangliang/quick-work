@@ -54,8 +54,3 @@ export const buildStart = (param: {projectType: string}): void => {
 };
 
 
-// 进度条
-// const ProgressBar = require("./single_log");
-// const pb = new ProgressBar("下载进度", 50);
-// pb.render({completed: num,
-//   total});

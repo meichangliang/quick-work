@@ -31,8 +31,10 @@
   "dependencies": {
     "commander": "^3.0.0",
     "inquirer": "^7.0.0",
+    "progress-stream": "^2.0.0",
     "request": "^2.88.0",
-    "single-line-log": "^1.1.2"
+    "single-line-log": "^1.1.2",
+    "unzip": "^0.1.11"
   },
   "devDependencies": {
     "@types/request": "^2.48.2",

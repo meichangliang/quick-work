@@ -38,6 +38,4 @@ class ProgressBar{
 
 }
 
-
-// 模块导出
 module.exports = ProgressBar;
