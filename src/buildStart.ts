@@ -1,10 +1,10 @@
-const download = require("./download");
 
 const downLoad_webapp = (): void => {
 
   console.info("正在当前目录构建应用程序。。。");
 
-  download({
+  const DownLoadFile = require("./download");
+  DownLoadFile({
     filePath: "https://github.com/meichangliang/Public_React_WebApp_TS/archive/master.zip",
     fileName: "xxxx.zip",
     finish(){

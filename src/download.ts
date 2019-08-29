@@ -9,7 +9,7 @@ class DownLoad{
     this.file_url = file_url;
     this.fileName = name;
     this.nowLen = 0;
-    this.maxLen = 0;
+    this.maxLen = 10000;
 
   }
   file_url: string;
@@ -44,10 +44,6 @@ class DownLoad{
       if(maxLen){
 
         this.maxLen = Number(maxLen);
-
-      } else {
-
-        console.error("没有获取到len");
 
       }
       callback({
