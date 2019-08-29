@@ -1,6 +1,6 @@
 const request = require("request");
 const fs = require("fs");
-const single_log = require("./single_log");
+import {ProgressBar} from "./single_log";
 
 class DownLoad{
 
@@ -63,16 +63,16 @@ interface Param{
   finish: Function;
 }
 
-const DownLoadFile = ({filePath, fileName, finish}: Param): void => {
+export const DownLoadFile = ({filePath, fileName, finish}: Param): void => {
 
   const file_url = filePath;
-  const ProgressBar = new single_log("下载进度", 50);
+  const pb = new ProgressBar("下载进度", 50);
   const dow = new DownLoad(file_url, fileName);
   dow.render((param: {
     [propName: string]: number;
   }) => {
 
-    ProgressBar.render({
+    pb.render({
       completed: param.nowLen,
       total: param.maxLen,
     });
@@ -84,8 +84,5 @@ const DownLoadFile = ({filePath, fileName, finish}: Param): void => {
   });
 
 };
-
-
-module.exports = DownLoadFile;
 
 

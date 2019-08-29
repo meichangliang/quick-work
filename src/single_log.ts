@@ -5,7 +5,7 @@ interface Render {
     total: number;
 }
 
-class ProgressBar{
+export class ProgressBar{
 
   constructor(description: string, bar_length: number){
 
@@ -38,4 +38,3 @@ class ProgressBar{
 
 }
 
-module.exports = ProgressBar;
