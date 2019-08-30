@@ -16,7 +16,6 @@ const downLoad_webapp = (callback: Function): void => {
     finish(){
 
       console.info("正在解压缩...");
-      console.info("localPath", localPath);
       fs.createReadStream(localPath)
         .pipe(unzip.Extract({path: cachePath}))
         .on("close", () => {
