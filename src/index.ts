@@ -56,7 +56,7 @@ inquirer.prompt(promptList).then((answers: {
 
     //文件下载并解压结束目录为
     console.log("文件下载并解压结束目录为");
-    console.log(`${localPath}/${param}`);
+    console.log(param);
 
   });
 

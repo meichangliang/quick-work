@@ -2,7 +2,6 @@ import {DownLoadFile} from "../utils/download";
 import {cachePath} from "../config/baseUrl";
 const unzip = require("unzip");
 const fs = require("fs");
-let timer: any;
 const path = require("path");
 
 
@@ -18,17 +17,14 @@ const downLoad_webapp = (callback: Function): void => {
 
       console.info("正在解压缩...");
       console.info("localPath", localPath);
-      fs.createReadStream(localPath).pipe(unzip.Parse({path: cachePath})).on("entry", (entry: any) => {
+      fs.createReadStream(localPath)
+        .pipe(unzip.Extract({path: cachePath}))
+        .on("close", () => {
 
-        clearTimeout(timer);
-        timer = setTimeout(() => {
+          callback(`${cachePath}${path.sep}Public_React_WebApp_TS-master`);
 
-          const fileName = entry.path.split(path.sep)[0];
-          callback(fileName);
+        });
 
-        }, 100);
-
-      });
 
     },
   });
