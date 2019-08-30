@@ -33,6 +33,26 @@ const downLoad_webapp = (callback: Function): void => {
 //wxapp
 const downLoad_wxapp = (callback: Function): void => {
 
+  const localPath = `${cachePath}${path.sep}react-wxapp-app.zip`;
+  console.info("正在从远程服务器获取文件,请稍后.....");
+  DownLoadFile({
+    filePath: "https://github.com/meichangliang/Public_Taro_MiniPrograms_TS/archive/master.zip",
+    fileName: localPath,
+    finish(){
+
+      console.info("正在解压缩...");
+      fs.createReadStream(localPath)
+        .pipe(unzip.Extract({path: cachePath}))
+        .on("close", () => {
+
+          callback(`${cachePath}${path.sep}Public_Taro_MiniPrograms_TS-master`);
+
+        });
+
+
+    },
+  });
+
 };
 
 export const depotLoad = (param: {projectType: string}, callback: Function): void => {
