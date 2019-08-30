@@ -20,14 +20,11 @@ const downLoad_webapp = (callback: Function): void => {
       console.info("localPath", localPath);
       fs.createReadStream(localPath).pipe(unzip.Parse({path: cachePath})).on("entry", (entry: any) => {
 
-        console.log("fileName", entry);
         clearTimeout(timer);
         timer = setTimeout(() => {
 
-
-          // const fileName = entry.path.split(path.sep)[0];
-          // console.log("fileName", fileName);
-          // callback(fileName);
+          const fileName = entry.path.split(path.sep)[0];
+          callback(fileName);
 
         }, 100);
 
