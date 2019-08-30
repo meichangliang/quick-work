@@ -16,9 +16,6 @@ const inquirer = require("inquirer");
 
 import {buildStart} from "./buildStart";
 
-console.info("正在检测运行环境。。。");
-
-
 const promptList: Array<object> = [
   {
     type: "list",

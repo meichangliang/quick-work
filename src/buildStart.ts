@@ -5,7 +5,7 @@ const downLoad_webapp = (): void => {
 
   DownLoadFile({
     filePath: "https://github.com/meichangliang/Public_React_WebApp_TS/archive/master.zip",
-    fileName: "xxxx.zip",
+    fileName: "c:~/xxxx.zip",
     finish(){
 
       console.log("下载完成");
