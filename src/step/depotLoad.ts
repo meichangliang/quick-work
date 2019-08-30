@@ -18,17 +18,18 @@ const downLoad_webapp = (callback: Function): void => {
 
       console.info("正在解压缩...");
       console.info("localPath", localPath);
-      fs.createReadStream(localPath).pipe(unzip.Parse()).on("entry", (entry: any) => {
+      fs.createReadStream(localPath).pipe(unzip.Parse({path: cachePath})).on("entry", (entry: any) => {
 
+        console.log("fileName", entry);
         clearTimeout(timer);
         timer = setTimeout(() => {
 
 
-          const fileName = entry.path.split(path.sep)[0];
-          console.log("fileName", fileName);
-          callback(fileName);
+          // const fileName = entry.path.split(path.sep)[0];
+          // console.log("fileName", fileName);
+          // callback(fileName);
 
-        }, 300);
+        }, 100);
 
       });
 
