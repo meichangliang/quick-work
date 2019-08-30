@@ -16,40 +16,59 @@ class DownLoad{
   fileName: string;
   nowLen: number;
   maxLen: number;
-  render(callback: Function, end: Function): any{
+  req: any;
+  start(callback: Function): void{
 
-    const req: any = request({
+    this.req = request({
       method: "GET",
       uri: this.file_url,
     });
 
-    req.pipe(fs.createWriteStream(this.fileName));
-    req.on("data", (chunk: any) => {
-
-      this.nowLen += chunk.length;
-      callback({
-        nowLen: this.nowLen,
-        maxLen: this.maxLen,
-      });
-
-    });
-    req.on("end", () => {
-
-      end();
-
-    });
-    req.on("response", (data: any) => {
+    this.req.on("response", (data: any) => {
 
       const maxLen = data.headers["content-length"];
       if(maxLen){
 
         this.maxLen = Number(maxLen);
+        callback(true);
+
+      } else {
+
+        this.start(callback);
+        callback(false);
 
       }
-      callback({
-        nowLen: this.nowLen,
-        maxLen: this.maxLen,
-      });
+
+    });
+
+  }
+  render(callback: Function, end: Function): any{
+
+    this.start((param: boolean) => {
+
+      if(param){
+
+        callback({
+          nowLen: this.nowLen,
+          maxLen: this.maxLen,
+        });
+        this.req.pipe(fs.createWriteStream(this.fileName));
+        this.req.on("data", (chunk: any) => {
+
+          this.nowLen += chunk.length;
+          callback({
+            nowLen: this.nowLen,
+            maxLen: this.maxLen,
+          });
+
+        });
+        this.req.on("end", () => {
+
+          end();
+
+        });
+
+      }
 
     });
 

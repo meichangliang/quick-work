@@ -29,6 +29,13 @@ module.exports = {
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-this-alias": [
+      "error",
+      {
+        allowDestructuring: true, // Allow `const { props, state } = this`; false by default
+        allowedNames: ["_this"], // Allow `const self = this`; `[]` by default
+      },
+    ],
     //重点指导
     "no-var": "error",
     "arrow-body-style": ["error", "always"],
@@ -162,7 +169,7 @@ module.exports = {
     "lines-between-class-members": ["error", "never"],
     "no-multiple-empty-lines": "error",
     "max-depth": ["error", 3],
-    "max-lines-per-function": "error",
+    "max-lines-per-function": ["error"],
     "max-nested-callbacks": ["error", 3],
     "max-params": ["error", 3],
     "multiline-ternary": ["error", "never"],
