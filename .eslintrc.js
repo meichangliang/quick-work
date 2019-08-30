@@ -194,7 +194,7 @@ module.exports = {
         },
       },
     ],
-    "object-curly-spacing": ["error", "never"],
+    "object-curly-spacing": "error",
     "object-property-newline": "error",
     "one-var": ["error", "never"],
     "one-var-declaration-per-line": "error",

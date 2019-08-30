@@ -1,11 +1,12 @@
 const program = require("commander");
 const npmInfo = require("../package");
+import {mkdir} from "./utils/mkdir";
 
-const QAFilter = (val: string): string => {
-
-  return val.toLowerCase();
-
-};
+//不管三七二十一.先创建一个缓存目录
+const os = require("os");
+const homedir = os.homedir();
+const localPath = `${homedir}/quick-work`;
+mkdir(localPath);
 
 
 //基础部分
@@ -24,7 +25,7 @@ const promptList: Array<object> = [
     choices: [
       {
         name: "WebPC",
-        value: "webpc",
+        value: "webPc",
       },
       {
         name: "H5",
@@ -35,11 +36,6 @@ const promptList: Array<object> = [
         value: "MiniPrograms",
       },
     ],
-    filter(val: string): string{
-
-      return QAFilter(val);
-
-    },
   },
   {
     type: "list",
@@ -51,11 +47,6 @@ const promptList: Array<object> = [
         value: "React",
       },
     ],
-    filter(val: string): string{
-
-      return QAFilter(val);
-
-    },
   },
 ];
 

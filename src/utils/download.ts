@@ -23,7 +23,6 @@ class DownLoad{
       method: "GET",
       uri: this.file_url,
     });
-
     this.req.on("response", (data: any) => {
 
       const maxLen = data.headers["content-length"];
@@ -36,6 +35,7 @@ class DownLoad{
 
         this.start(callback);
         callback(false);
+        console.error("连接失败,正在重试...\n");
 
       }
 

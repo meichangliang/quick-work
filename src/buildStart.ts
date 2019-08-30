@@ -1,14 +1,13 @@
 import {DownLoadFile} from "./utils/download";
-const os = require("os");
-const homedir = os.homedir();
+import {cachePath} from "./config/baseUrl";
+
 
 const downLoad_webapp = (): void => {
 
-  console.info("正在当前目录构建应用程序。。。");
-
+  const localPath = cachePath;
   DownLoadFile({
     filePath: "https://github.com/meichangliang/Public_React_WebApp_TS/archive/master.zip",
-    fileName: `${homedir}/quick-work/xxxx.zip`,
+    fileName: `${localPath}/1234.zip`,
     finish(){
 
       console.log("下载完成");
@@ -27,14 +26,14 @@ export const buildStart = (param: {projectType: string}): void => {
 
   switch (param.projectType){
 
-    case "webpc":
+    case "webPc":
       downLoad_webapp();
       break;
-    case "webh5":
+    case "webH5":
       downLoad_webapp();
       break;
 
-    case "miniprograms":
+    case "MiniPrograms":
       downLoad_wxapp();
       break;
 
