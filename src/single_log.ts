@@ -31,7 +31,7 @@ export class ProgressBar{
       empty += "#";
 
     }
-    const cmdText = `${this.description}: ${(100 * Number(percent)).toFixed(2)}% ${cell}${empty} ${opts.completed}/${opts.total}`;
+    const cmdText = `${this.description}: ${(100 * Number(percent)).toFixed(2)}% ${cell}${empty} ${opts.completed}/${opts.total} \n`;
     slog(cmdText);
 
   };
