@@ -1,11 +1,14 @@
-import {DownLoadFile} from "./download";
+import {DownLoadFile} from "./utils/download";
+const os = require("os");
+const homedir = os.homedir();
+
 const downLoad_webapp = (): void => {
 
   console.info("正在当前目录构建应用程序。。。");
 
   DownLoadFile({
     filePath: "https://github.com/meichangliang/Public_React_WebApp_TS/archive/master.zip",
-    fileName: "c:~/xxxx.zip",
+    fileName: `${homedir}/quick-work/xxxx.zip`,
     finish(){
 
       console.log("下载完成");
