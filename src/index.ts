@@ -14,9 +14,7 @@ program.version(npmInfo.version).parse(process.argv);
 
 //问答部分
 const inquirer = require("inquirer");
-
-import {buildStart} from "./buildStart";
-
+import {depotLoad} from "./step/depotLoad";
 const promptList: Array<object> = [
   {
     type: "list",
@@ -49,14 +47,18 @@ const promptList: Array<object> = [
     ],
   },
 ];
-
-
 inquirer.prompt(promptList).then((answers: {
   projectType: string;
   [propName: string]: string;
 }) => {
 
-  buildStart(answers);
+  depotLoad(answers, (param: string) => {
+
+    //文件下载并解压结束目录为
+    console.log("文件下载并解压结束目录为");
+    console.log(`${localPath}/${param}`);
+
+  });
 
 });
 
