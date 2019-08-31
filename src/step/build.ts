@@ -1,6 +1,7 @@
 const shell = require("shelljs");
 const path = require("path");
 import {mkdir} from "../utils/mkdir";
+const child = require("child_process");
 
 export const buildProject = (param: any): void => {
 
@@ -22,6 +23,16 @@ export const buildProject = (param: any): void => {
   const _buildPath = `${buildPath}.vscode${path.sep}`;
   mkdir(_buildPath);
   shell.cp("-R", _srcPath, _buildPath);
+
+
+  child.exec(`code${buildPath}`);
+  child.exec(`cd ${buildPath} && npm ci`, (err: any, sto: any) => {
+
+    console.error(err);
+    console.info(sto);
+
+  });
+
 
 };
 
