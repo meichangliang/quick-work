@@ -14,7 +14,15 @@ export const buildProject = (param: any): void => {
 
   }
 
+
   shell.cp("-R", srcPath, buildPath);
+
+
+  //隐藏目录
+  const _srcPath = `${param.projectPath + path.sep}.vscode${path.sep}*`;
+  const _buildPath = `${buildPath}.vscode${path.sep}`;
+  mkdir(_buildPath);
+  shell.cp("-R", _srcPath, _buildPath);
 
 };
 
