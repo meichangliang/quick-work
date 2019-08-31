@@ -79,7 +79,7 @@ const projectNameQA: Array<object> = [
     type: "input",
     message: "请输入项目的名称",
     name: "projectName",
-    default: "public-react-webapp-ts", // 默认值
+    default: "my-app", // 默认值
   },
 ];
 
@@ -154,10 +154,7 @@ const main = async (): Promise<any> => {
 
   QAresult.projectPath = projectPath;
   QAresult.buildPath = process.cwd();
-  console.log(QAresult);
-
   buildProject(QAresult);
-
 
 };
 

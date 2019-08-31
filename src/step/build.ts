@@ -17,8 +17,7 @@ export const buildProject = (param: any): void => {
 
   shell.cp("-R", srcPath, buildPath);
 
-
-  //隐藏目录
+  //隐藏目录的复制粘贴
   const _srcPath = `${param.projectPath + path.sep}.vscode${path.sep}*`;
   const _buildPath = `${buildPath}.vscode${path.sep}`;
   mkdir(_buildPath);
