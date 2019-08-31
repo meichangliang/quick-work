@@ -24,15 +24,7 @@ export const buildProject = (param: any): void => {
   mkdir(_buildPath);
   shell.cp("-R", _srcPath, _buildPath);
 
-
-  child.exec(`code${buildPath}`);
-  child.exec(`cd ${buildPath} && npm ci`, (err: any, sto: any) => {
-
-    console.error(err);
-    console.info(sto);
-
-  });
-
+  child.exec(`code ${buildPath}`);
 
 };
 
