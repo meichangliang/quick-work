@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 const shell = require("shelljs");
 const path = require("path");
 import {mkdir} from "../utils/mkdir";
@@ -23,6 +24,43 @@ export const buildProject = (param: any): void => {
   const _buildPath = `${buildPath}.vscode${path.sep}`;
   mkdir(_buildPath);
   shell.cp("-R", _srcPath, _buildPath);
+  //隐藏文件的复制
+
+
+  shell.cp(
+    `${param.projectPath + path.sep}.babelrc`,
+    `${buildPath}.babelrc`
+  );
+
+  shell.cp(
+    `${param.projectPath + path.sep}.env`,
+    `${buildPath}.env`
+  );
+
+  shell.cp(
+    `${param.projectPath + path.sep}.eslintignore`,
+    `${buildPath}.eslintignore`
+  );
+
+  shell.cp(
+    `${param.projectPath + path.sep}.eslintrc.js`,
+    `${buildPath}.eslintrc.js`
+  );
+
+  shell.cp(
+    `${param.projectPath + path.sep}.gitignore`,
+    `${buildPath}.gitignore`
+  );
+
+  shell.cp(
+    `${param.projectPath + path.sep}.npmrc`,
+    `${buildPath}.npmrc`
+  );
+
+  shell.cp(
+    `${param.projectPath + path.sep}.prettierignore`,
+    `${buildPath}.prettierignore`
+  );
 
   child.exec(`code ${buildPath}`);
 
