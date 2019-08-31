@@ -2,6 +2,7 @@ const program = require("commander");
 const npmInfo = require("../package");
 import {mkdir} from "./utils/mkdir";
 const inquirer = require("inquirer");
+import {buildProject} from "./step/build";
 
 //不管三七二十一.先创建一个缓存目录
 const os = require("os");
@@ -136,25 +137,32 @@ const _projectName = (): Promise<any> => {
 //run
 const main = async (): Promise<any> => {
 
-  const projectPath = await _start();
-  const developResult = await _develop();
-  let QAresult = {
-    ...developResult,
-  };
-  if(!developResult.rootDir){
+  // const projectPath = await _start();
+  // const developResult = await _develop();
+  // let QAresult = {
+  //   ...developResult,
+  // };
+  // if(!developResult.rootDir){
 
-    const projectName = await _projectName();
-    QAresult = {
-      ...QAresult,
-      ...projectName,
-    };
+  //   const projectName = await _projectName();
+  //   QAresult = {
+  //     ...QAresult,
+  //     ...projectName,
+  //   };
 
-  }
+  // }
 
-  QAresult.projectPath = projectPath;
+  // QAresult.projectPath = projectPath;
+  // QAresult.buildPath = process.cwd();
+  // buildProject(QAresult);
 
-  console.log(QAresult);
 
+  buildProject({editor: "VSCode",
+    rootDir: true,
+    projectPath:
+      "C:\\Users\\MeiCh\\quick-work\\Public_React_WebApp_TS-master",
+    projectName: "xxxmyapp",
+    buildPath: "D:\\MyProject\\quick-work\\bin"});
 
 };
 
