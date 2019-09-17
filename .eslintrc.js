@@ -41,7 +41,13 @@ module.exports = {
     "arrow-body-style": ["error", "always"],
     "arrow-parens": ["error", "always"],
     "arrow-spacing": "error",
-    "generator-star-spacing": ["error", { before: false, after: true }],
+    "generator-star-spacing": [
+      "error",
+      {
+        before: false,
+        after: true,
+      },
+    ],
     "no-confusing-arrow": "error",
     "no-duplicate-imports": "error",
     "no-useless-computed-key": "error",
@@ -68,14 +74,8 @@ module.exports = {
       },
     ],
     //ES6相关
-    "rest-spread-spacing": ["error", "never"],
     "prefer-const": "error",
     "object-shorthand": "error",
-    "no-duplicate-imports": "error",
-    "no-confusing-arrow": "error",
-    "arrow-spacing": "error",
-    "arrow-parens": ["error", "always"],
-    "arrow-body-style": ["error", "always"],
     //node相关
     "no-buffer-constructor": "error",
     "no-mixed-requires": "error",
