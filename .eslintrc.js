@@ -36,6 +36,9 @@ module.exports = {
         allowedNames: ["_this"], // Allow `const self = this`; `[]` by default
       },
     ],
+    "@typescript-eslint/class-name-casing": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     //重点指导
     "no-var": "error",
     "arrow-body-style": ["error", "always"],
@@ -166,7 +169,7 @@ module.exports = {
       },
     ],
     "linebreak-style": ["error", "unix"],
-    "lines-between-class-members": ["error", "never"],
+    "lines-between-class-members": ["error", "always"],
     "no-multiple-empty-lines": "error",
     "max-depth": ["error", 3],
     "max-lines-per-function": ["error"],
@@ -183,7 +186,6 @@ module.exports = {
     "no-nested-ternary": "error",
     "no-new-object": "error",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
-    "no-trailing-spaces": "error",
     "no-whitespace-before-property": "error",
     "no-unneeded-ternary": "error",
     "object-curly-newline": [
@@ -215,7 +217,7 @@ module.exports = {
     "semi-spacing": "error",
     "semi-style": "error",
     "sort-vars": "error",
-    "space-before-blocks": ["error", "never"],
+    "space-before-blocks": "error",
     "space-before-function-paren": [
       "error",
       {
